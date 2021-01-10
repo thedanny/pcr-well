@@ -7,6 +7,12 @@
 		public Test[] Tests { get; set; }
 		
 		public string[] Positions { get; set; }
+		public string WorkingFolder { get; set; }
+		public string ConvertedPath { get; set; }
+		public string Prefix { get; set; }
+		public bool AppendTimestamp { get; set; }
+		
+		
 		public int RowCount { get; set; }
 
 		public  class Control

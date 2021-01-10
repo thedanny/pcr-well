@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using NLog.Extensions.Logging;
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 using Pcr.ExportAdjuster.WorkerService;
 
 namespace Tests
@@ -28,6 +31,11 @@ namespace Tests
 		   _server=	Host.CreateDefaultBuilder(new string[0])
 				.ConfigureServices((hostContext, services) =>
 				{
+					services.AddLogging(loggingBuilder =>
+					{
+						loggingBuilder.ClearProviders();
+						loggingBuilder.AddNLog("NLog.config");
+					});
 					services.Configure<PcrSetting>(_configuration.GetSection("pcrSetting"));
 					
 				}).Build();
@@ -44,12 +52,26 @@ namespace Tests
 		public void GetAllWellAddressShouldReturn96Rows()
 		{
 			var pcrSetting= _server.Services.GetService<IOptions<PcrSetting>>().Value;
-			var converter=new PcrConverter(pcrSetting);
+			var logger= _server.Services.GetService<ILogger<PcrConverter>>();
+			
+			var converter=new PcrConverter(pcrSetting,logger);
 			var wells= converter.GetAllWellAddresses();
 
 			Console.WriteLine(string.Join("\n",wells.Select(a=>a.ToString())));
 			
-		} 
+		}
+
+		[Test]
+		public async Task ShouldConvert()
+		{
+			var logger= _server.Services.GetService<ILogger<PcrConverter>>();
+			var pcrSetting= _server.Services.GetService<IOptions<PcrSetting>>();
+
+			var converter=new PcrConverter(pcrSetting.Value,logger);
+			var sourcePath = @"C:\Data\Pcr-samples\inputFile.csv";
+			await converter.ConvertAsync(sourcePath);
+
+		}
 		
 		[Test]
 		public void ExportPcrWellFormatToStream_shouldExport()
@@ -57,12 +79,13 @@ namespace Tests
 			var pcrSetting= _server.Services.GetService<IOptions<PcrSetting>>();
 			Console.WriteLine(pcrSetting.Value.Nc.Position);
 			var sourcePath = @"C:\Data\Pcr-samples\inputFile.csv";
+			var logger= _server.Services.GetService<ILogger<PcrConverter>>();
 
 			
 			
 			using (var source=File.OpenRead(sourcePath))
 			{
-				var converter=new PcrConverter(pcrSetting.Value);
+				var converter=new PcrConverter(pcrSetting.Value,logger);
 
 				var tmp = sourcePath+"_converted.csv";
 

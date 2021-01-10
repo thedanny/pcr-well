@@ -5,6 +5,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="pcr-well.sln" t="IncludeFlat" />
       <e p="Pcr.ExportAdjuster.WorkerService" t="IncludeRecursive">
+        <e p="AppNlog.config" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -25,6 +26,7 @@
         <e p="Worker.cs" t="Include" />
       </e>
       <e p="Tests" t="IncludeRecursive">
+        <e p="AppNlog.config" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -43,6 +45,7 @@
     </e>
     <e p="C:\Users\danie\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
     <e p="C:\Users\danie\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\danie\.nuget\packages\nlog.config\4.7.6\contentFiles\any\any\nlog.config" t="Include" />
     <e p="C:\Users\danie\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.api.dll" t="Include" />
     <e p="C:\Users\danie\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.dll" t="Include" />
     <e p="C:\Users\danie\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.dll" t="Include" />

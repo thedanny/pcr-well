@@ -45,9 +45,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39028148-56e3-470a-be46-fa19f7ac84a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrConverter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrSetting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/AppNlog.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/AppNlog.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.pcr-well/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.pcr-well/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.pcr-well/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.pcr-well/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.pcr-well/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.pcr-well/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Pcr.ExportAdjuster.WorkerService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Pcr.ExportAdjuster.WorkerService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrSetting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Worker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,17 +71,21 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/321/Stream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/83/Index.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.nuget/packages/nlog.config/4.7.6/contentFiles/any/any/NLog.config" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/869E6C21-96FE-460F-9B92-1C6D00DF784B/dc/6fe34e64/FileNotFoundException.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Program.cs" />
-        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/appsettings.json" />
         <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrSetting.cs" />
-        <option value="$PROJECT_DIR$/Tests/appsettings.json" />
-        <option value="$PROJECT_DIR$/Tests/UnitTest1.cs" />
-        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrConverter.cs" />
         <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Worker.cs" />
+        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Program.cs" />
+        <option value="$PROJECT_DIR$/Tests/UnitTest1.cs" />
+        <option value="$USER_HOME$/.nuget/packages/nlog.config/4.7.6/contentFiles/any/any/NLog.config" />
+        <option value="$PROJECT_DIR$/Tests/AppNlog.config" />
+        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/appsettings.json" />
+        <option value="$PROJECT_DIR$/Tests/appsettings.json" />
+        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrConverter.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +103,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Pcr.ExportAdjuster.WorkerService">
+  <component name="RunManager" selected="Publish to folder.PublishService">
     <configuration name="Pcr.ExportAdjuster.WorkerService" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Pcr.ExportAdjuster.WorkerService.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -104,6 +119,11 @@
         <option name="Build" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Publish to folder.PublishService" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -114,6 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610255858016</updated>
       <workItem from="1610255863195" duration="15684000" />
+      <workItem from="1610293610795" duration="9450000" />
     </task>
     <servers />
   </component>
@@ -130,44 +151,53 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1860" height="279" key="GridCell.Tab.0.bottom" timestamp="1610272322170">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="91" key="GridCell.Tab.0.bottom" timestamp="1610298896342">
+      <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state width="1860" height="279" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610272322170" />
-    <state width="1860" height="279" key="GridCell.Tab.0.center" timestamp="1610272322169">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="91" key="GridCell.Tab.0.bottom/0.0.1440.770@0.0.1440.770" timestamp="1610298896342" />
+    <state width="1398" height="91" key="GridCell.Tab.0.center" timestamp="1610298896342">
+      <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state width="1860" height="279" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610272322169" />
-    <state width="1860" height="279" key="GridCell.Tab.0.left" timestamp="1610272322169">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="91" key="GridCell.Tab.0.center/0.0.1440.770@0.0.1440.770" timestamp="1610298896342" />
+    <state width="1398" height="91" key="GridCell.Tab.0.left" timestamp="1610298896342">
+      <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state width="1860" height="279" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610272322169" />
-    <state width="1860" height="279" key="GridCell.Tab.0.right" timestamp="1610272322170">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="91" key="GridCell.Tab.0.left/0.0.1440.770@0.0.1440.770" timestamp="1610298896342" />
+    <state width="1398" height="91" key="GridCell.Tab.0.right" timestamp="1610298896342">
+      <screen x="0" y="0" width="1440" height="770" />
     </state>
     <state width="1860" height="279" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610272322170" />
+    <state width="1398" height="91" key="GridCell.Tab.0.right/0.0.1440.770@0.0.1440.770" timestamp="1610298896342" />
     <state x="552" y="251" key="Rider.ProjectTemplateDialog.Size" timestamp="1610257948613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="251" key="Rider.ProjectTemplateDialog.Size/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610257948613" />
+    <state x="383" y="92" width="672" height="678" key="search.everywhere.popup" timestamp="1610300579146">
+      <screen x="0" y="0" width="1440" height="770" />
+    </state>
+    <state x="383" y="92" width="672" height="678" key="search.everywhere.popup/0.0.1440.770@0.0.1440.770" timestamp="1610300579146" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Worker.cs</url>
-          <line>45</line>
+          <line>79</line>
           <properties documentPath="C:\tools\src\pcr-well\Pcr.ExportAdjuster.WorkerService\Worker.cs" initialLine="40">
             <startOffsets>
-              <option value="1409" />
+              <option value="2163" />
             </startOffsets>
             <endOffsets>
-              <option value="1410" />
+              <option value="2164" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

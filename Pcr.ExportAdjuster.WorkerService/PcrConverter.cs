@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace Pcr.ExportAdjuster.WorkerService
 {
 	public class PcrConverter
 	{
 		private readonly PcrSetting _setting;
+		private readonly ILogger<PcrConverter> _logger;
 
-		public PcrConverter(PcrSetting setting)
+		public PcrConverter(PcrSetting setting, ILogger<PcrConverter> logger)
 		{
 			_setting = setting;
+			_logger = logger;
 		}
 
 		private SortedList<string, InputData> ReadInput(Stream input, Dictionary<string, WellAddress> addressLookup)
@@ -60,7 +64,22 @@ namespace Pcr.ExportAdjuster.WorkerService
 				.ToArray();
 
 		}
- 
+
+		public async Task ConvertAsync(string filePath)
+		{
+			_logger.LogInformation($"Converting File {filePath}");
+			var sourceInfo=new FileInfo(filePath);
+			var now = DateTime.Now;
+			await using var source=File.Open(filePath,FileMode.Open,FileAccess.Read,FileShare.Read);
+			
+			var dstName = $"{_setting.Prefix}-{now:yyyyMMdd-hhmmtt}_{sourceInfo.Name}";
+			var convertedCsv = Path.Combine(_setting.ConvertedPath, dstName);
+			
+			_logger.LogInformation($"Creating  {convertedCsv}");
+			await using var sw = new StreamWriter(File.Open(convertedCsv,FileMode.OpenOrCreate,FileAccess.Write,FileShare.Read));
+			ExportPcrWellFormatToStream(source,sw);
+			_logger.LogInformation($"Exported {convertedCsv}");
+		}
 		public void ExportPcrWellFormatToStream(Stream inputStream, StreamWriter output)
 		{
 			var allWellAddresses = GetAllWellAddresses();
@@ -68,7 +87,9 @@ namespace Pcr.ExportAdjuster.WorkerService
 			var data = ReadInput(inputStream,addressLookupByPosition);
 
 
+			_logger.LogInformation($"Found {data.Count} Rows from source");
 			const string emptyRow = ",,,,,,,,";
+			
 			output.WriteLine("[Sample Setup],,,,,,,,");
 			output.WriteLine("Well,Well Position,Sample Name,Target Name,Task,Reporter,Quencher,Quantity,Comments");
 		
@@ -83,11 +104,14 @@ namespace Pcr.ExportAdjuster.WorkerService
 				if (address.Position == settingNc.Position)
 				{
 					WriteWell(address, settingNc.Name);
+					_logger.LogInformation($"Negative Control Logged at Row {address}");
 				}
 				//is current address Positive Control
 				else if (address.Position == settingPc.Position)
 				{
 					WriteWell(address, settingPc.Name);
+					_logger.LogInformation($"Negative Control Logged at Row {address}");
+
 				}
 				//is there sample for the current address
 				else if (data.ContainsKey(address.Position))
@@ -108,6 +132,8 @@ namespace Pcr.ExportAdjuster.WorkerService
 					output.WriteLine(emptyRow);
 				}
 				
+				_logger.LogInformation($"Written {data.Count} Sample Rows Each Containing {_setting.Tests.Length}");
+
 				
 				
 			}

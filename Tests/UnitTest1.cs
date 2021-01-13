@@ -77,7 +77,7 @@ namespace Tests
 		public void ExportPcrWellFormatToStream_shouldExport()
 		{
 			var pcrSetting= _server.Services.GetService<IOptions<PcrSetting>>();
-			Console.WriteLine(pcrSetting.Value.Nc.Position);
+			
 			var sourcePath = @"C:\Data\Pcr-samples\inputFile.csv";
 			var logger= _server.Services.GetService<ILogger<PcrConverter>>();
 

@@ -2,8 +2,8 @@
 {
 	public  class PcrSetting
 	{
-		public Control Nc { get; set; }
-		public Control Pc { get; set; }
+		public Control[] Controls { get; set; }
+		
 		public Test[] Tests { get; set; }
 		
 		public string[] Positions { get; set; }
@@ -11,6 +11,7 @@
 		public string ConvertedPath { get; set; }
 		public string Prefix { get; set; }
 		public bool AppendTimestamp { get; set; }
+		public bool WriteAddressForEmptyWell { get; set; }
 		
 		
 		public int RowCount { get; set; }
@@ -18,7 +19,7 @@
 		public  class Control
 		{
 			public string Name { get; set; }
-			public int Well { get; set; }
+			//public int Well { get; set; }
 			public string Position { get; set; }
 		}
 
@@ -30,6 +31,8 @@
 			public string Quencher { get; set; }
 			public string Quantity { get; set; }
 			public string Comments { get; set; }
+			
+			public string Type { get; set; }
 		}
 	}
 }

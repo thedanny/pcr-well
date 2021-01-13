@@ -45,18 +45,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39028148-56e3-470a-be46-fa19f7ac84a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/AppNlog.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/AppNlog.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/WellTypeNames.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.pcr-well/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.pcr-well/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.pcr-well/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.pcr-well/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.pcr-well/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.pcr-well/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Pcr.ExportAdjuster.WorkerService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Pcr.ExportAdjuster.WorkerService.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrConverter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Worker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UnitTest1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/appsettings.json" afterDir="false" />
     </list>
@@ -77,15 +71,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrSetting.cs" />
         <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Worker.cs" />
         <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/Program.cs" />
-        <option value="$PROJECT_DIR$/Tests/UnitTest1.cs" />
         <option value="$USER_HOME$/.nuget/packages/nlog.config/4.7.6/contentFiles/any/any/NLog.config" />
         <option value="$PROJECT_DIR$/Tests/AppNlog.config" />
-        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/appsettings.json" />
-        <option value="$PROJECT_DIR$/Tests/appsettings.json" />
+        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrSetting.cs" />
+        <option value="$PROJECT_DIR$/Tests/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/PcrConverter.cs" />
+        <option value="$PROJECT_DIR$/Tests/appsettings.json" />
+        <option value="$PROJECT_DIR$/Pcr.ExportAdjuster.WorkerService/appsettings.json" />
       </list>
     </option>
   </component>
@@ -119,11 +113,6 @@
         <option name="Build" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Publish to folder.PublishService" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -134,7 +123,8 @@
       <option name="presentableId" value="Default" />
       <updated>1610255858016</updated>
       <workItem from="1610255863195" duration="15684000" />
-      <workItem from="1610293610795" duration="9450000" />
+      <workItem from="1610293610795" duration="10328000" />
+      <workItem from="1610564131555" duration="4446000" />
     </task>
     <servers />
   </component>
@@ -157,25 +147,25 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="91" key="GridCell.Tab.0.bottom" timestamp="1610298896342">
-      <screen x="0" y="0" width="1440" height="770" />
+    <state width="1398" height="91" key="GridCell.Tab.0.bottom" timestamp="1610428631254">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610272322170" />
+    <state width="1398" height="91" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610428631254" />
     <state width="1398" height="91" key="GridCell.Tab.0.bottom/0.0.1440.770@0.0.1440.770" timestamp="1610298896342" />
-    <state width="1398" height="91" key="GridCell.Tab.0.center" timestamp="1610298896342">
-      <screen x="0" y="0" width="1440" height="770" />
+    <state width="1398" height="91" key="GridCell.Tab.0.center" timestamp="1610428631254">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610272322169" />
+    <state width="1398" height="91" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610428631254" />
     <state width="1398" height="91" key="GridCell.Tab.0.center/0.0.1440.770@0.0.1440.770" timestamp="1610298896342" />
-    <state width="1398" height="91" key="GridCell.Tab.0.left" timestamp="1610298896342">
-      <screen x="0" y="0" width="1440" height="770" />
+    <state width="1398" height="91" key="GridCell.Tab.0.left" timestamp="1610428631253">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610272322169" />
+    <state width="1398" height="91" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610428631253" />
     <state width="1398" height="91" key="GridCell.Tab.0.left/0.0.1440.770@0.0.1440.770" timestamp="1610298896342" />
-    <state width="1398" height="91" key="GridCell.Tab.0.right" timestamp="1610298896342">
-      <screen x="0" y="0" width="1440" height="770" />
+    <state width="1398" height="91" key="GridCell.Tab.0.right" timestamp="1610428631254">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610272322170" />
+    <state width="1398" height="91" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610428631254" />
     <state width="1398" height="91" key="GridCell.Tab.0.right/0.0.1440.770@0.0.1440.770" timestamp="1610298896342" />
     <state x="552" y="251" key="Rider.ProjectTemplateDialog.Size" timestamp="1610257948613">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -88,48 +88,46 @@ namespace Pcr.ExportAdjuster.WorkerService
 
 
 			_logger.LogInformation($"Found {data.Count} Rows from source");
-			const string emptyRow = ",,,,,,,,";
 			
 			output.WriteLine("[Sample Setup],,,,,,,,");
 			output.WriteLine("Well,Well Position,Sample Name,Target Name,Task,Reporter,Quencher,Quantity,Comments");
 		
 			
-			var settingNc = _setting.Nc;
-			var settingPc = _setting.Pc;
+			
+
+			var controls = _setting.Controls.ToList();
 
 			foreach (var address in allWellAddresses)
 			{
+				var control = controls.FirstOrDefault(a => a.Position == address.Position);
 
-				//Is Current Address Negative Control
-				if (address.Position == settingNc.Position)
+				//Is Current Address Reserved for Control
+				if (control!=null)
 				{
-					WriteWell(address, settingNc.Name);
-					_logger.LogInformation($"Negative Control Logged at Row {address}");
-				}
-				//is current address Positive Control
-				else if (address.Position == settingPc.Position)
-				{
-					WriteWell(address, settingPc.Name);
-					_logger.LogInformation($"Negative Control Logged at Row {address}");
+					WriteWell(address, control.Name,control.Name);
 
+					//remove written control
+					controls.Remove(control);
+					
+					_logger.LogInformation($"Negative Control Logged at Row {address}");
 				}
 				//is there sample for the current address
 				else if (data.ContainsKey(address.Position))
 				{
 					var sample=data[address.Position];
-					WriteWell(sample.Address,sample.Barcode);
+					WriteWell(sample.Address,sample.Barcode,WellTypeNames.Sample);
 					data.Remove(address.Position);
 				}
-				//all items written out ?
-				else if (!data.Any())
+				//all samples and controls have been written out ?
+				else if (!data.Any() && !controls.Any())
 				{
 					break;
 				}
-				//No sample wells
+				//Empty wells
 				else
 				{
-					//TODO; snd Sample.Empty to the helper method
-					output.WriteLine(emptyRow);
+					if(_setting.WriteAddressForEmptyWell)
+						WriteWell(address,string.Empty,WellTypeNames.EmptyRow);
 				}
 				
 				_logger.LogInformation($"Written {data.Count} Sample Rows Each Containing {_setting.Tests.Length}");
@@ -141,9 +139,9 @@ namespace Pcr.ExportAdjuster.WorkerService
 
 			output.Flush();
 			
-			void WriteWell(WellAddress address, string barcode)
+			void WriteWell(WellAddress address, string barcode, string wellTypeName)
 			{
-				foreach (var t in _setting.Tests)
+				foreach (var t in _setting.Tests.Where(a=>a.Type==wellTypeName))
 					output.WriteLine($"{address.Well},{address.Position},{barcode}," +
 					                 $"{t.TargetName},{t.Task},{t.Reporter}," +
 					                 $"{t.Quencher},{t.Quantity},{t.Comments}");

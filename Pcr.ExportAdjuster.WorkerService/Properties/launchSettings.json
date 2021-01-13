@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "Pcr.ExportAdjuster.WorkerService": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
